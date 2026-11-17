@@ -1,0 +1,93 @@
+.titulo-catalogo {
+    margin: 0;
+    padding: 28px 28px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fafafa;
+}
+
+.catalogo-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 24px;
+    padding: 24px 28px 48px;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    background: #141414;
+    border: 1px solid #262626;
+    border-radius: 16px;
+    transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    border-color: #6366f1;
+    box-shadow: 0 12px 32px rgba(99, 102, 241, 0.18);
+}
+
+.tarjeta .imagen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 12px;
+}
+
+.tarjeta .imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tarjeta h2 {
+    margin: 0;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #fafafa;
+}
+
+.tarjeta p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #a1a1aa;
+}
+
+.tarjeta .precio {
+    margin-top: auto;
+    padding-top: 6px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tarjeta button {
+    margin-top: 8px;
+    padding: 11px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: inherit;
+    color: #fff;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: opacity 0.2s, background 0.2s;
+}
+
+.tarjeta button:hover {
+    opacity: 0.9;
+}
+
+.tarjeta button.agregado {
+    background: transparent;
+    border-color: #6366f1;
+    color: #a5b4fc;
+}

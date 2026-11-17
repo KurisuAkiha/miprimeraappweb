@@ -1,5 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./encabezado.css";
+import Link from "next/link";
+import RegistrarSW from "./Componentes/RegistrarSW";
+import BotonSesion from "./Componentes/BotonSesion";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,10 +23,26 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <header className="encabezado">
+          <Link href="/" className="encabezado-marca">
+            Mi primera app web
+          </Link>
+
+          <nav className="encabezado-nav">
+            <Link href="/" className="nav-enlace">Inicio</Link>
+            <Link href="/productos" className="nav-enlace">Productos</Link>
+            <Link href="/contactos" className="nav-enlace">Contactos</Link>
+            <BotonSesion />
+          </nav>
+        </header>
+
+        <RegistrarSW />
+        {children}
+      </body>
     </html>
   );
 }
