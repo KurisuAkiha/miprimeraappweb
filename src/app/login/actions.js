@@ -17,7 +17,7 @@ export async function login(estadoPrevio, formData) {
     }
 
     revalidatePath('/', 'layout');
-    redirect('/');
+    redirect('/productos');
 }
 
 export async function logout() {
